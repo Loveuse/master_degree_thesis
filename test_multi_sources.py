@@ -169,7 +169,8 @@ pathname_graph = 'graphs/Wiki-Vote-Rand.txt'
 # pathname_output = 'wiki-Vote_results/s'
 #addRandomProbToGraph('gnutella/as-caida20070917.txt', 'gnutella/as-caida20070917-Rand.txt')
 
-graph = read_direct_weighted_graph(pathname_graph)
+#graph = read_direct_weighted_graph(pathname_graph)
+graph = nx.read_edgelist(pahtname_graph, create_using=nx.DiGraph(), data=(('act_prob',float),), comments='#')
 
 def run(*args):
   steps, graph, k, queue, interval = list(args)[0]
