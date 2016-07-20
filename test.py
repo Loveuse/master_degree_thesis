@@ -205,7 +205,8 @@ pathname_output = 'wiki-vote-results/csv/test_0_step3.csv'
 #addRandomProbToGraph('gnutella/as-caida20070917.txt', 'gnutella/as-caida20070917-Rand.txt')
 
 
-graph = readDirectWeightedGraph(pathname_graph)
+#graph = readDirectWeightedGraph(pathname_graph)
+graph = nx.read_edgelist(pathname_graph, create_using=nx.DiGraph(), data=(('act_prob',float),), comments='#')
 
 
 out_file = open(pathname_output,'a')
