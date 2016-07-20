@@ -185,7 +185,7 @@ def run(*args):
   queue.put(i)
 
 n_jobs = 30
-processes = 8
+processes = 16
 
 intervals = [100, 250, 500, 650, 1000, 1200, 1500, 1700, 2100, 2700]
 queue = Manager().Queue()
